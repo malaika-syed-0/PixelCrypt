@@ -1,0 +1,290 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#020916;
+
+font-family:Poppins,sans-serif;
+
+color:white;
+
+min-height:100vh;
+
+overflow-x:hidden;
+
+}
+
+/* =======================
+BACKGROUND
+======================= */
+
+#particles-js{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+z-index:-2;
+
+}
+
+.overlay{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:radial-gradient(circle,#041329,#000814);
+
+z-index:-1;
+
+}
+
+/* =======================
+TOP BAR
+======================= */
+
+.top-bar{
+
+padding:25px 50px;
+
+display:flex;
+
+justify-content:flex-start;
+
+}
+
+.back-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:10px 22px;
+
+font-family:Orbitron;
+
+font-size:15px;
+
+text-decoration:none;
+
+color:#00bfff;
+
+border:2px solid #00bfff;
+
+border-radius:12px;
+
+background:rgba(0,120,255,.12);
+
+transition:.3s;
+
+box-shadow:0 0 12px rgba(0,191,255,.25);
+
+}
+
+.back-btn:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 0 22px #00bfff;
+
+}
+
+/* =======================
+CONTAINER
+======================= */
+
+.container{
+
+width:min(95%,1100px);
+
+margin:20px auto;
+
+position:relative;
+
+z-index:2;
+
+text-align:center;
+
+}
+
+.container h1{
+
+font-family:Orbitron;
+
+font-size:40px;
+
+margin-bottom:10px;
+
+}
+
+.subtitle{
+
+font-size:16px;
+
+color:#d6e5ff;
+
+margin-bottom:30px;
+
+}
+
+/* =======================
+CARD
+======================= */
+
+.history-card{
+
+background:rgba(7,23,41,.92);
+
+border:2px solid rgba(0,191,255,.25);
+
+border-radius:20px;
+
+padding:30px;
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 0 35px rgba(0,191,255,.18);
+
+overflow-x:auto;
+
+}
+
+/* =======================
+TABLE
+======================= */
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+}
+
+th{
+
+font-family:Orbitron;
+
+font-size:16px;
+
+padding:16px;
+
+background:#00bfff;
+
+color:white;
+
+}
+
+td{
+
+padding:16px;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+font-size:15px;
+
+}
+
+tr:hover{
+
+background:rgba(0,191,255,.08);
+
+}
+
+/* =======================
+EMPTY HISTORY
+======================= */
+
+.empty{
+
+padding:50px;
+
+font-size:18px;
+
+color:#c8d8ef;
+
+}
+
+/* =======================
+CLEAR BUTTON
+======================= */
+
+.clear-btn{
+
+display:inline-block;
+
+margin-top:30px;
+
+padding:14px 32px;
+
+background:#ff4444;
+
+color:white;
+
+text-decoration:none;
+
+font-family:Orbitron;
+
+font-size:16px;
+
+border-radius:14px;
+
+transition:.3s;
+
+}
+
+.clear-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 0 20px #ff4444;
+
+}
+
+/* =======================
+RESPONSIVE
+======================= */
+
+@media(max-width:900px){
+
+.container{
+
+width:96%;
+
+}
+
+.container h1{
+
+font-size:32px;
+
+}
+
+th,
+td{
+
+font-size:13px;
+
+padding:12px;
+
+}
+
+}

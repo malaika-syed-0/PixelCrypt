@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PixelCrypt</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="doodles">
+
+<img src="{{ url_for('static', filename='images/hide_doodle.png') }}" class="doodle hide">
+
+<img src="{{ url_for('static', filename='images/secure_doodle.png') }}" class="doodle secure">
+
+<img src="{{ url_for('static', filename='images/encrypt_doodle.png') }}" class="doodle encrypt">
+
+<img src="{{ url_for('static', filename='images/safe&private_doodle.png') }}" class="doodle private">
+
+</div>
+<section class="hero">
+
+<div class="logo">
+
+<img src="{{ url_for('static', filename='images/shield.png') }}">
+
+</div>
+
+<h1>
+
+<span class="white">PIXEL</span>
+
+<span class="blue">CRYPT</span>
+
+</h1>
+
+<p class="tagline">
+
+Secure • Encrypt • Protect
+
+</p>
+
+<p class="description">
+
+Hide your secret messages inside images using military-grade AES Encryption.
+
+</p>
+
+<div class="buttons">
+
+<a href="{{ url_for('login_page') }}" class="btn login">
+
+    SIGN IN
+
+</a>
+
+<a href="{{ url_for('register_page') }}" class="btn register">
+
+    REGISTER
+
+</a>
+
+</div>
+
+</section>
+
+</body>
+
+</html>

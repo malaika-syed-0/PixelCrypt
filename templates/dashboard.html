@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PixelCrypt Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<div class="overlay"></div>
+
+<!-- Top Navigation -->
+
+<div class="top-bar">
+
+<a href="/settings" class="small-btn">
+
+⚙ Settings
+
+</a>
+
+<a href="/history" class="small-btn">
+
+🕘 History
+
+</a>
+
+</div>
+
+<!-- Dashboard -->
+
+<div class="dashboard">
+
+<h1>
+
+Welcome back,
+
+<span>{{ session["user"] }}</span>
+
+</h1>
+
+<p class="subtitle">
+
+What would you like to do today?
+
+</p>
+
+<div class="cards">
+
+<!-- Hide Message -->
+
+<div class="card">
+
+<div class="icon">
+
+🔒
+
+</div>
+
+<h2>
+
+Hide Message
+
+</h2>
+
+<p>
+
+Encrypt and hide text
+inside an image.
+
+</p>
+
+<a href="/encode" class="card-btn">
+
+START ENCODING ▶
+
+</a>
+
+</div>
+
+<!-- Decode Message -->
+
+<div class="card">
+
+<div class="icon">
+
+🔓
+
+</div>
+
+<h2>
+
+Decode Message
+
+</h2>
+
+<p>
+
+Recover hidden messages
+from an encrypted image.
+
+</p>
+
+<a href="/decode_page" class="card-btn">
+
+START DECODING ▶
+
+</a>
+
+</div>
+
+</div>
+
+<a href="/logout" class="logout-btn">
+
+⏻ LOG OUT
+
+</a>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/background.js') }}"></script>
+
+</body>
+
+</html>

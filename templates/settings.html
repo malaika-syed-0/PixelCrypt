@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Account Settings</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/settings.css') }}">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<div class="overlay"></div>
+
+<div class="top-bar">
+
+<a href="/dashboard" class="back-btn">
+
+← Dashboard
+
+</a>
+
+</div>
+
+<div class="container">
+
+<h1>
+
+⚙ Account Settings
+
+</h1>
+
+<p class="subtitle">
+
+Update your account information securely.
+
+</p>
+
+<form
+action="/settings"
+method="POST">
+
+<div class="settings-card">
+
+<h2>
+
+Profile
+
+</h2>
+
+<input
+type="text"
+name="username"
+placeholder="Username"
+value="{{ user.username }}"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="Email"
+value="{{ user.email }}"
+required>
+
+<hr>
+
+<h2>
+
+Change Password
+
+</h2>
+
+<input
+type="password"
+name="current_password"
+placeholder="Current Password">
+
+<input
+type="password"
+name="new_password"
+placeholder="New Password">
+
+<input
+type="password"
+name="confirm_password"
+placeholder="Confirm New Password">
+
+<button
+type="submit"
+class="save-btn">
+
+SAVE CHANGES
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/background.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PixelCrypt - Register</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<div class="overlay"></div>
+
+<section class="hero">
+
+<h1 class="title">
+
+<span class="white">PIXEL</span>
+
+<span class="blue">CRYPT</span>
+
+</h1>
+
+<p class="tagline">
+
+Create Your Secure Account
+
+</p>
+
+<div class="login-card">
+
+<form action="/register" method="POST" class="form">
+
+<input
+type="text"
+name="username"
+placeholder="USERNAME"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="EMAIL"
+required>
+
+<input
+type="password"
+name="password"
+placeholder="PASSWORD"
+required>
+
+<input
+type="password"
+name="confirm_password"
+placeholder="CONFIRM PASSWORD"
+required>
+
+<button type="submit">
+
+REGISTER
+
+</button>
+
+</form>
+
+<p class="form-link">
+
+Already have an account?
+
+<a href="/login">
+
+Sign In
+
+</a>
+</p>
+
+</form>
+
+</div>
+
+</section>
+
+</div>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/background.js') }}"></script>
+
+</body>
+
+</html>

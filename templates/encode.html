@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Hide Secret Message</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/encode.css') }}">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<div class="overlay"></div>
+
+<!-- Main Container -->
+
+<div class="container">
+
+<div class="title-row">
+
+<a href="/dashboard" class="back-btn">
+
+← Dashboard
+
+</a>
+
+<h1>
+
+Hide Secret Message
+
+</h1>
+
+</div>
+
+<form
+action="/encode"
+method="POST"
+enctype="multipart/form-data">
+
+<div class="content">
+
+<!-- LEFT PANEL -->
+
+<div class="upload-card">
+
+<div class="upload-icon">
+
+🖼️
+
+</div>
+
+<h2>
+
+PNG Image
+
+</h2>
+
+<p>
+
+Drag & Drop
+
+<br>
+
+or
+
+<br>
+
+Browse Image
+
+</p>
+
+<input
+type="file"
+name="image"
+id="image"
+accept=".png,image/png"
+required>
+
+<p class="png-text">
+
+✔ PNG images only
+
+</p>
+
+</div>
+
+<!-- RIGHT PANEL -->
+
+<div class="details-card">
+
+<h3>
+
+Secret Message
+
+</h3>
+
+<textarea
+
+name="message"
+
+placeholder="Enter your secret message..."
+
+required>
+
+</textarea>
+
+<h3>
+
+Encryption Password
+
+</h3>
+
+<input
+
+type="password"
+
+name="password"
+
+placeholder="Enter password"
+
+required>
+<button
+type="submit"
+class="hide-btn">
+
+HIDE MESSAGE ▶
+
+</button>
+
+</div>
+
+</div>
+
+</form>
+<a href="/download" class="download-btn">
+
+ Download Encoded Image
+
+</a>
+
+</div>
+
+<script>
+
+const fileInput = document.getElementById("image");
+
+const pngText = document.querySelector(".png-text");
+
+fileInput.addEventListener("change", function(){
+
+    if(this.files.length > 0){
+
+        const file = this.files[0];
+
+        if(file.type !== "image/png"){
+
+            alert("Only PNG images are allowed.");
+
+            this.value = "";
+
+            pngText.innerHTML = "❌ Please select a PNG image.";
+
+            pngText.style.color = "#ff5555";
+
+            return;
+
+        }
+
+        pngText.innerHTML = "✔ " + file.name;
+
+        pngText.style.color = "#00ff99";
+
+    }
+
+});
+
+</script>
+
+<script src="{{ url_for('static', filename='js/background.js') }}"></script>
+
+</body>
+
+</html>

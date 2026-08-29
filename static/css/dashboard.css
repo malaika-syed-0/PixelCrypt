@@ -1,0 +1,503 @@
+/* ===========================================
+   PIXELCRYPT DASHBOARD
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#020916;
+
+    font-family:Poppins,sans-serif;
+
+    color:white;
+
+    height:100vh;
+
+    overflow:hidden;
+
+}
+
+/* Background */
+
+#particles-js{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    z-index:-2;
+
+}
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:radial-gradient(circle,#041329,#000814);
+
+    z-index:-1;
+
+}
+
+/* Main Dashboard */
+
+.dashboard{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding-top:25px;
+
+    text-align:center;
+
+}
+
+/* ===========================
+   TOP RIGHT BUTTONS
+=========================== */
+
+.top-bar{
+
+    position:absolute;
+
+    top:35px;
+
+    right:50px;
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+.small-btn{
+
+    text-decoration:none;
+
+    color:white;
+
+    border:2px solid #00bfff;
+
+    background:rgba(0,120,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    padding:12px 22px;
+
+    border-radius:14px;
+
+    transition:.35s;
+
+    font-size:16px;
+
+    font-weight:500;
+
+}
+
+.small-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 20px #00bfff;
+
+}
+
+/* ===========================
+   HEADING
+=========================== */
+
+.dashboard h1{
+
+    font-family:Orbitron;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+}
+
+.dashboard h1 span{
+
+    color:#00bfff;
+
+}
+
+.subtitle{
+
+    color:#c8d5e6;
+
+    font-size:18px;
+
+    margin-bottom:28px;
+
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.cards{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.card{
+
+    width:380px;
+
+    min-height:280px;
+
+    background:rgba(5,18,38,.82);
+
+    border:2px solid rgba(0,191,255,.35);
+
+    border-radius:24px;
+
+    padding:28px;
+
+    transition:.35s;
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 0 35px rgba(0,191,255,.12);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#00bfff;
+
+    box-shadow:0 0 35px rgba(0,191,255,.45);
+
+}
+
+.icon{
+
+    font-size:50px;
+
+    margin-bottom:12px;
+
+}
+
+.card h2{
+
+    font-family:Orbitron;
+
+    font-size:26px;
+    margin-bottom:10px;
+
+    color:#00bfff;
+
+}
+
+.card p{
+
+    font-size:16px;
+
+    color:#d6d6d6;
+
+    line-height:26px;
+
+    margin-bottom:22px;
+
+}
+/* ===========================
+   CARD BUTTONS
+=========================== */
+
+.card-btn{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+    height:52px;
+
+    text-decoration:none;
+
+    font-family:Orbitron;
+
+    font-size:20px;
+
+    color:white;
+
+    border:2px solid #00bfff;
+
+    border-radius:16px;
+
+    background:rgba(0,120,255,.15);
+
+    transition:.35s;
+
+    box-shadow:0 0 18px rgba(0,191,255,.25);
+
+}
+
+.card-btn:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(0,170,255,.22);
+
+    box-shadow:0 0 30px #00bfff;
+
+}
+
+/* ===========================
+   LOGOUT BUTTON
+=========================== */
+
+.logout-btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:300px;
+
+    height:70px;
+
+    margin-top:30px;
+
+    text-decoration:none;
+
+    font-family:Orbitron;
+
+    font-size:22px;
+
+    color:white;
+
+    border:2px solid #00bfff;
+
+    border-radius:18px;
+
+    background:rgba(0,120,255,.15);
+
+    transition:.35s;
+
+    box-shadow:0 0 22px rgba(0,191,255,.28);
+
+}
+
+.logout-btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 0 35px #00bfff;
+
+}
+
+/* ===========================
+   FADE IN ANIMATION
+=========================== */
+
+.dashboard{
+
+    animation:fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   FLOATING CARD EFFECT
+=========================== */
+
+.card{
+
+    animation:floatCard 5s ease-in-out infinite;
+
+}
+
+.card:nth-child(2){
+
+    animation-delay:.5s;
+
+}
+
+@keyframes floatCard{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1100px){
+
+    .dashboard{
+
+        padding-top:90px;
+
+    }
+
+    .cards{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:30px;
+
+    }
+
+    .card{
+
+        width:95%;
+
+        max-width:500px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .top-bar{
+
+        position:static;
+
+        justify-content:center;
+
+        margin-top:20px;
+
+        margin-bottom:30px;
+
+    }
+
+    .dashboard{
+
+        width:95%;
+
+        padding-top:20px;
+
+    }
+
+    .dashboard h1{
+
+        font-size:36px;
+
+    }
+
+    .subtitle{
+
+        font-size:18px;
+
+        margin-bottom:35px;
+
+    }
+
+    .card{
+
+        padding:30px;
+
+        min-height:auto;
+
+    }
+
+    .icon{
+
+        font-size:56px;
+
+    }
+
+    .card h2{
+
+        font-size:26px;
+
+    }
+
+    .card p{
+
+        font-size:16px;
+
+        line-height:28px;
+
+    }
+
+    .card-btn{
+
+        height:58px;
+
+        font-size:18px;
+
+    }
+
+    .logout-btn{
+
+        width:240px;
+
+        height:60px;
+
+        font-size:18px;
+
+        margin-top:40px;
+
+    }
+
+}

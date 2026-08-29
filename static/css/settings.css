@@ -1,0 +1,305 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#020916;
+
+font-family:Poppins,sans-serif;
+
+color:white;
+
+min-height:100vh;
+
+overflow-x:hidden;
+
+}
+
+/* =======================
+BACKGROUND
+======================= */
+
+#particles-js{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+z-index:-2;
+
+}
+
+.overlay{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:radial-gradient(circle,#041329,#000814);
+
+z-index:-1;
+
+}
+
+/* =======================
+TOP BAR
+======================= */
+
+.top-bar{
+
+width:100%;
+
+padding:25px 50px;
+
+display:flex;
+
+justify-content:flex-start;
+
+}
+
+.back-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:10px 22px;
+
+font-family:Orbitron;
+
+font-size:15px;
+
+text-decoration:none;
+
+color:#00bfff;
+
+border:2px solid #00bfff;
+
+border-radius:12px;
+
+background:rgba(0,120,255,.12);
+
+transition:.3s;
+
+box-shadow:0 0 12px rgba(0,191,255,.25);
+
+}
+
+.back-btn:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 0 22px #00bfff;
+
+}
+
+/* =======================
+CONTAINER
+======================= */
+
+.container{
+
+width:min(92%,650px);
+
+margin:25px auto;
+
+text-align:center;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.container h1{
+
+font-family:Orbitron;
+
+font-size:40px;
+
+margin-bottom:10px;
+
+}
+
+.subtitle{
+
+font-size:16px;
+
+color:#d8e8ff;
+
+margin-bottom:35px;
+
+}
+
+/* =======================
+CARD
+======================= */
+
+.settings-card{
+
+background:rgba(8,22,40,.88);
+
+border:2px solid rgba(0,191,255,.25);
+
+border-radius:22px;
+
+padding:35px;
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 0 35px rgba(0,191,255,.18);
+
+}
+
+.settings-card h2{
+
+font-family:Orbitron;
+
+font-size:22px;
+
+margin-bottom:18px;
+
+color:#00bfff;
+
+text-align:left;
+
+}
+
+/* =======================
+INPUTS
+======================= */
+
+.settings-card input{
+
+width:100%;
+
+height:56px;
+
+margin-bottom:18px;
+
+padding:0 18px;
+
+background:#071729;
+
+border:2px solid #00bfff;
+
+border-radius:14px;
+
+font-size:16px;
+
+color:white;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+.settings-card input:focus{
+
+box-shadow:0 0 18px #00bfff;
+
+}
+
+/* =======================
+DIVIDER
+======================= */
+
+.settings-card hr{
+
+border:none;
+
+height:1px;
+
+background:rgba(255,255,255,.15);
+
+margin:30px 0;
+
+}
+
+/* =======================
+BUTTON
+======================= */
+
+.save-btn{
+
+width:100%;
+
+height:60px;
+
+margin-top:15px;
+
+border:none;
+
+border-radius:15px;
+
+font-family:Orbitron;
+
+font-size:18px;
+
+background:#00bfff;
+
+color:white;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.save-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 0 25px #00bfff;
+
+}
+
+/* =======================
+RESPONSIVE
+======================= */
+
+@media(max-width:768px){
+
+.top-bar{
+
+padding:20px;
+
+}
+
+.container{
+
+width:94%;
+
+}
+
+.container h1{
+
+font-size:32px;
+
+}
+
+.settings-card{
+
+padding:25px;
+
+}
+
+}

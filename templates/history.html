@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>History</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/history.css') }}">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<div class="overlay"></div>
+
+<div class="top-bar">
+
+<a href="/dashboard" class="back-btn">
+
+← Dashboard
+
+</a>
+
+</div>
+
+<div class="container">
+
+<h1>
+
+🕘 Activity History
+
+</h1>
+
+<p class="subtitle">
+
+Your recent encoding and decoding activity.
+
+</p>
+
+<div class="history-card">
+
+<table>
+
+<tr>
+
+<th>Date & Time</th>
+
+<th>Action</th>
+
+<th>Image</th>
+
+<th>Status</th>
+
+</tr>
+
+{% for item in history %}
+
+<tr>
+
+<td>{{ item["date_time"] }}</td>
+
+<td>{{ item["action"] }}</td>
+
+<td>{{ item["image_name"] }}</td>
+
+<td>{{ item["status"] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% if not history %}
+
+<div class="empty">
+
+No activity found.
+
+</div>
+
+{% endif %}
+
+<a href="/clear_history"
+class="clear-btn">
+
+🗑 Clear History
+
+</a>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/background.js') }}"></script>
+
+</body>
+
+</html>
